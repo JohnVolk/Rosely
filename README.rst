@@ -51,7 +51,6 @@ This example uses the `provided example CSV <https://raw.githubusercontent.com/J
 The resulting windrose diagram:
 
 .. image:: https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.html
-   :align: center
 
 Details and examples of plot customization, output options, and windrose calculation options can be found in the online documentation. 
 
