@@ -48,9 +48,9 @@ This example uses the `provided example CSV <https://raw.githubusercontent.com/J
     >>>     title='Twitchell Island, California'
     >>> )
 
-The resulting windrose diagram:
+The resulting windrose diagram saved as a png (download `this file <https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.html>`_ for an interactive example):
 
-.. image:: https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.html
+.. image:: https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.png
    :align: center
 
 Details and examples of plot customization, output options, and windrose calculation options can be found in the online documentation. 
