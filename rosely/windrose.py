@@ -93,7 +93,7 @@ class WindRose(object):
         self._plot_ready = True
 
     def plot(self, output_type='save', out_file=None, colors='Plasma',
-             template='plotly_dark', **kwargs):
+             template='plotly_dark', colors_reversed=True, **kwargs):
 
         if template not in pio.templates.keys():
             print('ERROR: invalid plotly template use one of:\n{}'
@@ -112,16 +112,19 @@ class WindRose(object):
             print(
                 'ERROR: {} is not a valid plotly color sequence, using default.'
             )
-            colors = px.colors.sequential.Plasma[::-1]
+            colors = px.colors.sequential.Plasma
 
         elif isinstance(colors, str):
-            colors = getattr(px.colors.sequential, colors)[::-1]
+            colors = getattr(px.colors.sequential, colors)
 
         if self.n_bins > len(colors):
             print(
                 'Warning: number of bins exceed number of colors, some '
                 'colors may repeat.'
             )
+
+        if colors_reversed:
+            colors = colors[::-1]
 
         fig = px.bar_polar(
             self.wind_df, r="frequency", theta="direction", color="speed",
