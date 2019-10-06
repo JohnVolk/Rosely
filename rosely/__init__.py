@@ -1,6 +1,5 @@
 """
-A simple package for making beautiful interactive windrose diagrams using pandas
-and plotly.
+A small package for efficiently generating customizable and interactive windrose diagrams. Once wind speed and direction is loaded into a ``pandas.DataFrame`` the package can create wind speed and direction statistics which are used to create windrose diagrams via ``Plotly``'s polar bar chart function.
 """
 
 __name__ = 'rosely'

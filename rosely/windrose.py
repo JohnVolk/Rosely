@@ -145,4 +145,6 @@ class WindRose(object):
             self.out_file = out_file
         elif output_type == 'show':
             fig.show()
+        elif output_type == 'return':
+            return fig
 

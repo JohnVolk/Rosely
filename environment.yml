@@ -1,0 +1,9 @@
+name: rosely
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - plotly
+  - python>=3.7
