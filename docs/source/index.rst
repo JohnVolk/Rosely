@@ -6,7 +6,7 @@
 Rosely
 ======
 
-Interactive windrose diagrams made easy using :mod:`plotly` and :mod:`pandas` 
+Interactive wind rose diagrams made easy using :mod:`plotly` and :mod:`pandas` 
 
 .. toctree::
    :maxdepth: 2

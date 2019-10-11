@@ -110,7 +110,9 @@ html_theme_options = {
     'github_button': 'true',
     'github_user': 'JohnVolk',
     'github_repo': 'Rosely',
-    'logo': 'rosely-200.png'
+    'logo': 'rosely-200.png',
+    'fixed_sidebar': 'true',
+    'donate_url': 'https://www.patreon.com/bePatron?u=25576909'
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -213,8 +215,7 @@ intersphinx_mapping = {
     'sphinx': ('http://www.sphinx-doc.org/en/stable', None),
     'python': ('https://docs.python.org/3', None),
     'numpy': ('https://docs.scipy.org/doc/numpy', None),
-    'pandas': ('http://pandas.pydata.org/pandas-docs/stable', None),
-    'plotly': ('https://www.plotly.express/plotly_express/', None)
+    'pandas': ('http://pandas.pydata.org/pandas-docs/stable', None)
 }
 
 # -- Options for todo extension ----------------------------------------------
