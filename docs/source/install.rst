@@ -15,3 +15,9 @@ Once activated install with PIP:
 .. code-block:: bash
 
    pip install rosely
+
+
+If all went well you should be able to import 
+
+    >>> from rosely import WindRose
+

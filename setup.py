@@ -26,7 +26,7 @@ classifiers = [
 
 setup(
     name='Rosely',
-    description='Interactive windrose diagrams using pandas and plotly',
+    description='Interactive wind rose diagrams simplified',
     long_description=readme,
     author='John Volk',
     author_email='john.volk@dri.edu',

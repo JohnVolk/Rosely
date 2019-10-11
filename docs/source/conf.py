@@ -12,9 +12,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../'))
 
 
 # -- Project information -----------------------------------------------------
@@ -26,8 +26,16 @@ author = 'John Volk'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = ''
 
+try:
+    from fluxdataqaqc import __version__ as version
+except ImportError:
+    pass
+else:
+    release = version
+
+autodoc_mock_imports = ['numpy', 'plotly', 'pandas']
 
 # -- General configuration ---------------------------------------------------
 
@@ -40,12 +48,16 @@ release = '0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'sphinx.ext.coverage',
+    'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.todo',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -73,7 +85,7 @@ language = None
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'sphinx'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -87,7 +99,19 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'font_family': 'Metrophobic',
+    'font_size': '15px',
+    'head_font_family': 'Pacifico',
+    'code_font_family': 'Ubuntu Mono',
+    'github_banner': 'false',
+    'github_type': 'watch',
+    'github_count': 'true',
+    'github_button': 'true',
+    'github_user': 'JohnVolk',
+    'github_repo': 'Rosely',
+    'logo': 'rosely-200.png'
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -103,7 +127,7 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-
+html_favicon = '_static/rosely-icon.png'
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -185,9 +209,22 @@ epub_exclude_files = ['search.html']
 # -- Options for intersphinx extension ---------------------------------------
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+intersphinx_mapping = {
+    'sphinx': ('http://www.sphinx-doc.org/en/stable', None),
+    'python': ('https://docs.python.org/3', None),
+    'numpy': ('https://docs.scipy.org/doc/numpy', None),
+    'pandas': ('http://pandas.pydata.org/pandas-docs/stable', None),
+    'plotly': ('https://www.plotly.express/plotly_express/', None)
+}
 
 # -- Options for todo extension ----------------------------------------------
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+# toggle on code blocks to remove prompt ">>> "
+def setup(app):
+    app.add_javascript('copybutton.js')
+    app.add_stylesheet('custom.css')
+    app.add_javascript("custom.js")
+    app.add_javascript("https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js")

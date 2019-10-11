@@ -1,10 +1,10 @@
 Rosely
 ======
 
-Interactive windroses using pandas and plotly
+Interactive wind roses simplified using Plotly and pandas
 
 
-``Rosely`` leverages the polar bar char of `Plotly <https://plot.ly/python/>`__ and `pandas <https://pandas.pydata.org/>`__ to simplyfy the creation of beautiful and interactive windrose diagrams. This package was inspired by the Plotly polar bar chart with hoverable tooltips, zoom, pan, and other interactive features.``Rosely``'s main purpose is to make use of the Plotly polar bar chart more accessable and efficient for custom workflows using pandas and a simple object-oriented implementation.
+``Rosely`` leverages the polar bar char of `Plotly <https://plot.ly/python/>`__ and `pandas <https://pandas.pydata.org/>`__ to simplyfy the creation of beautiful and interactive wind rose diagrams. This package was inspired by the Plotly polar bar chart with hoverable tooltips, zoom, pan, and other interactive features. ``Rosely`` makes use of the Plotly polar bar chart for wind rose diagrams more accessable and efficient for custom workflows using pandas and a simple object-oriented implementation.
 
 Documentation 
 -------------
@@ -34,7 +34,7 @@ Once activated install with PIP:
 Quick start
 -----------
 
-Given arbitrary time series data that contains wind speed and direction (degrees) ``Rosely`` can quickly produce wind statistics and interactive windrose diagrams once the data is loaded into a `pandas.DataFrame <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`__.
+Given arbitrary time series data that contains wind speed and direction (degrees) ``Rosely`` can quickly produce wind statistics and interactive wind rose diagrams once the data is loaded into a `pandas.DataFrame <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`__.
 
 This example uses the `provided example CSV <https://raw.githubusercontent.com/JohnVolk/Rosely/master/example/test_data.csv>`_ containing meterological data.
 
@@ -50,10 +50,10 @@ This example uses the `provided example CSV <https://raw.githubusercontent.com/J
        title='Twitchell Island, California'
    )
 
-The resulting windrose diagram saved as a png (download `this file <https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.html>`_ for an interactive example):
+The resulting wind rose diagram saved as a png (download `this file <https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.html>`_ for an interactive example):
 
 .. image:: https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.png
    :align: center
 
-Details and examples of plot customization, output options, and windrose calculation options can be found in the online documentation. 
+Details and examples of plot customization, output options, and wind rose calculation options can be found in the online documentation. 
 
