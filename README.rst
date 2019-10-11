@@ -38,15 +38,17 @@ Given arbitrary time series data that contains wind speed and direction (degrees
 
 This example uses the `provided example CSV <https://raw.githubusercontent.com/JohnVolk/Rosely/master/example/test_data.csv>`_ containing meterological data.
 
-    >>> import pandas as pd
-    >>> from rosely import WindRose
-    >>> df = pd.read_csv('path/to/example_data.csv')
-    >>> # make a WindRose object from the dataframe with "ws" and "wd" columns
-    >>> WR = WindRose(df)
-    >>> WR.plot(
-    >>>     template='seaborn', colors='Plotly3', 
-    >>>     title='Twitchell Island, California'
-    >>> )
+.. code-block:: python
+
+   import pandas as pd
+   from rosely import WindRose
+   df = pd.read_csv('path/to/example_data.csv')
+   # make a WindRose object from the dataframe with "ws" and "wd" columns
+   WR = WindRose(df)
+   WR.plot(
+       template='seaborn', colors='Plotly3', 
+       title='Twitchell Island, California'
+   )
 
 The resulting windrose diagram saved as a png (download `this file <https://raw.githubusercontent.com/JohnVolk/Rosely/master/docs/source/_static/quickstart.html>`_ for an interactive example):
 

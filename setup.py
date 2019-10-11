@@ -9,7 +9,7 @@ with io.open("rosely/__init__.py", "rt", encoding="utf8") as f:
 
 requires = [
     'numpy',
-    'pandas',
+    'pandas>=0.24',
     'plotly'
 ]
 
@@ -39,9 +39,5 @@ setup(
     packages=['rosely'],
     install_requires=requires,
     tests_require=tests_require,
-    package_data={
-        '': ['example/*'],
-        '': ['environment.yml'],
-    },
     include_package_data=True,
 )
