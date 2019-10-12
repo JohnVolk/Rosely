@@ -9,7 +9,7 @@ Interactive wind roses simplified using Plotly and pandas
 Documentation 
 -------------
 
-Coming soon.
+`ReadTheDocs <https://rosely.readthedocs.io/en/latest/index.html>`__
 
 
 Installation

@@ -8,6 +8,8 @@ Rosely
 
 Interactive wind rose diagrams made easy using :mod:`plotly` and :mod:`pandas` 
 
+`View on GitHub <https://github.com/JohnVolk/Rosely>`__
+
 .. toctree::
    :maxdepth: 2
 
