@@ -237,7 +237,11 @@ class WindRose(object):
 
         fig = px.bar_polar(
             self.wind_df, r="frequency", theta="direction", color="speed",
-            template=template, color_discrete_sequence=colors, **kwargs
+            template=template, color_discrete_sequence=colors, 
+            category_orders={'direction': [
+                'N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 
+                'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
+            }, **kwargs
         )
 
         # handle file save for accessing from instance variable
