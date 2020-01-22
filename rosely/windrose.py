@@ -77,7 +77,7 @@ class WindRose(object):
             variable_names (None or dict): default None. If none the wind speed
                 and wind direction columns in :attr:`WindRose.df` should be 
                 named 'ws' and 'wd' respectively. Otherwise a dictionary that
-                maps the repsective columns to 'ws' and 'wd' should be provided.
+                maps the respective columns to 'ws' and 'wd' should be provided.
                 
         Returns:
             None

@@ -112,7 +112,7 @@ html_theme_options = {
     'github_repo': 'Rosely',
     'logo': 'rosely-200.png',
     'fixed_sidebar': 'true',
-    'donate_url': 'https://www.patreon.com/bePatron?u=25576909'
+    'donate_url': 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=JH3GLXKCGGQLG&currency_code=USD&source=url'
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
