@@ -56,7 +56,7 @@ class WindRose(object):
             raise TypeError("Must assign a pandas.DataFrame object")
         self._df = df
 
-    def calc_stats(self, normed=True, bins=9, variable_names=None):
+     def calc_stats(self, normed=True, bins=9, variable_names=None):
         """
         Calculate wind speed and direction bins needed for generating wind rose
         diagrams. 
@@ -71,7 +71,7 @@ class WindRose(object):
             normed (bool): default True. If True compute wind speed/direction
                 frequency bins that are normalized to sum to 100. If False
                 frequency bins are counts of occurences of wind speed/direction.
-            bins (int): default 9. Number of wind speed and direction bins to
+            bins (int or list): default 9. Number of wind speed and direction bins to
                 calculate. 9 is used because most :mod:`plotly` color sequences
                 are lenght 9 or 10 which are later used by :meth:`WindRose.plot`
             variable_names (None or dict): default None. If none the wind speed
@@ -140,6 +140,9 @@ class WindRose(object):
             wind.frequency /= wind.frequency.sum()
             wind.frequency *= 100
             wind.frequency = wind.frequency.round(2)
+
+        if isinstance(bins, list):
+            bins = len(bins)
 
         self.n_bins = bins
         self.wind_df = wind
