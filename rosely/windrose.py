@@ -112,6 +112,10 @@ class WindRose(object):
         if not {'ws', 'wd'}.issubset(wind.columns):
             raise KeyError('ERROR: missing "ws" and "wd" columns, aborting.')
 
+        wind = wind.replace([np.inf, -np.inf], np.nan).dropna(
+             subset=["ws", "wd"], how="any"
+        )
+
         spd_bins = pd.cut(wind.ws, bins=bins).dropna()
         spd_bins.name = 'spd_bins'
         wind = wind.join(spd_bins)
